@@ -6,20 +6,20 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 17:36:51 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/16 19:31:08 by gleal            ###   ########.fr       */
+/*   Updated: 2021/05/20 21:34:08 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_abs(int n)
+static int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-static int		ft_ln_itoa(int n)
+static int	ft_ln_itoa(int n)
 {
 	int	ln;
 
@@ -34,7 +34,7 @@ static int		ft_ln_itoa(int n)
 	return (ln);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		ln;

@@ -6,13 +6,13 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 18:28:32 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/16 19:31:40 by gleal            ###   ########.fr       */
+/*   Updated: 2021/05/20 21:39:48 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		is_in_set(char c, char *set)
+static int	is_in_set(char c, char *set)
 {
 	while (*set)
 	{
@@ -23,7 +23,7 @@ static int		is_in_set(char c, char *set)
 	return (0);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
 	int		end;

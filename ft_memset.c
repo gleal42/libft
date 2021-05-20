@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 19:08:48 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/03 23:25:12 by gleal            ###   ########.fr       */
+/*   Updated: 2021/05/20 21:38:27 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	unsigned char	*string;
 	size_t			i;
 
-	string = (unsigned char*)b;
+	string = (unsigned char *)b;
 	i = 0;
 	while (i < len)
 	{

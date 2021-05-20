@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/29 01:34:43 by gleal             #+#    #+#             */
-/*   Updated: 2021/01/29 03:14:50 by gleal            ###   ########.fr       */
+/*   Updated: 2021/05/20 21:36:07 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	ch;
 	size_t			i;
 
-	destn = (unsigned char*)dst;
-	sourc = (unsigned char*)src;
+	destn = (unsigned char *)dst;
+	sourc = (unsigned char *)src;
 	ch = (unsigned char)c;
 	i = 0;
 	while (i < n)

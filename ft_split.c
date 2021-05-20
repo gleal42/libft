@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 23:26:13 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/16 16:42:02 by gleal            ###   ########.fr       */
+/*   Updated: 2021/05/20 21:39:30 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	words = ft_wordnr(str, c);
-	new = malloc(sizeof(char*) * (words + 1));
+	new = malloc(sizeof(char *) * (words + 1));
 	if (!new)
 		return (0);
 	ft_put_strings(new, str, c);

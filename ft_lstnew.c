@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 23:34:38 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/16 19:28:43 by gleal            ###   ########.fr       */
+/*   Updated: 2021/05/20 21:35:36 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*head;
 
-	head = (t_list*)malloc(sizeof(t_list));
+	head = (t_list *)malloc(sizeof(t_list));
 	if (!head)
 		return (0);
 	head->content = content;

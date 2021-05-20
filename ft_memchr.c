@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 18:03:56 by gleal             #+#    #+#             */
-/*   Updated: 2021/01/31 19:34:26 by gleal            ###   ########.fr       */
+/*   Updated: 2021/05/20 21:36:33 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*string;
 
 	i = 0;
-	string = (unsigned char*)s;
+	string = (unsigned char *)s;
 	ch = (unsigned char)c;
 	while (i < n)
 	{
