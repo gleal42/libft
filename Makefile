@@ -1,47 +1,77 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    Makefile 2                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/09 15:43:58 by gleal             #+#    #+#              #
-#    Updated: 2021/02/11 02:28:56 by gleal            ###   ########.fr        #
+#    Updated: 2021/06/20 22:26:10 by gleal            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
-NAME = libft.a
-SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c \
-       ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c ft_tolower.c \
-       ft_calloc.c ft_strdup.c \
-       ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
-OBJS = $(SRCS:.c=.o)
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
-	ft_lstiter.c ft_lstmap.c
-BONUS_OBJS = $(BONUS:.c=.o)
+CC := gcc
+FLAGS := -Wall -Wextra -Werror
+NAME := libft.a
+SRCS := ./strings/memory_related/ft_strjoin.c \
+	./strings/memory_related/ft_split.c \
+	./strings/memory_related/ft_substr.c \
+	./strings/memory_related/ft_strtrim.c \
+	./strings/memory_related/ft_strdup.c \
+	./strings/modify/ft_strlcpy.c \
+	./strings/modify/ft_toupper.c \
+	./strings/modify/ft_strmapi.c \
+	./strings/modify/ft_strlcat.c \
+	./strings/modify/ft_tolower.c \
+	./strings/info/ft_strnstr.c \
+	./strings/info/ft_strlen.c \
+	./strings/info/ft_strchr.c \
+	./strings/info/ft_strrchr.c \
+	./strings/info/ft_strncmp.c \
+	./numbers/ft_atoi.c \
+	./numbers/ft_itoa.c \
+	./print/ft_putstr_fd.c \
+	./print/ft_putnbr_fd.c \
+	./print/ft_putendl_fd.c \
+	./print/ft_putchar_fd.c \
+	./char_info/ft_isdigit.c \
+	./char_info/ft_isascii.c \
+	./char_info/ft_isprint.c \
+	./char_info/ft_isalpha.c \
+	./char_info/ft_isalnum.c \
+	./memory_operations/ft_memcmp.c \
+	./memory_operations/ft_bzero.c \
+	./memory_operations/ft_memcpy.c \
+	./memory_operations/ft_memccpy.c \
+	./memory_operations/ft_memchr.c \
+	./memory_operations/ft_memset.c \
+	./memory_operations/ft_memmove.c \
+	./memory_operations/ft_calloc.c \
+	./linked_lists/ft_lstadd_back.c \
+	./linked_lists/ft_lstnew.c \
+	./linked_lists/ft_lstlast.c \
+	./linked_lists/ft_lstclear.c \
+	./linked_lists/ft_lstiter.c \
+	./linked_lists/ft_lstmap.c \
+	./linked_lists/ft_lstsize.c \
+	./linked_lists/ft_lstadd_front.c \
+	./linked_lists/ft_lstdelone.c
+OBJS := $(SRCS:.c=.o)
 
-all: $(NAME)
+all: $(NAME) 
 
 %.o : %.c
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $^ -o $@ 
 
 $(NAME) : $(OBJS)
 	ar -rc $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar -rc $(NAME) $^
-
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+		rm -f $(NAME)
 
 re: fclean all
 
-
-
-.PHONY: all clean fclean re
+.PHONY: libft minilibx all bonus clean fclean re
