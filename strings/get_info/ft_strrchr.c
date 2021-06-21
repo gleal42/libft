@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/03 00:07:20 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/03 00:44:22 by gleal            ###   ########.fr       */
+/*   Created: 2021/02/02 18:43:55 by gleal             #+#    #+#             */
+/*   Updated: 2021/02/18 16:12:35 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_info.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
-	size_t			i;
+	char	*str;
+	char	*res;
 
-	str1 = (unsigned char *)s1;
-	str2 = (unsigned char *)s2;
-	i = 0;
-	if (!n)
+	str = (char *)s;
+	res = 0;
+	if (!str)
 		return (0);
-	while (str1[i] && str2[i] && i + 1 < n && str1[i] == str2[i])
-		i++;
-	return (str1[i] - str2[i]);
+	while (*str)
+	{
+		if (*str == (char)c)
+			res = str;
+		str++;
+	}
+	if (*str == (char)c)
+		res = str;
+	return (res);
 }

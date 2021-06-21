@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "memory_related.h"
 
 static int	is_in_set(char c, char *set)
 {

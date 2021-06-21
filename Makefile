@@ -12,6 +12,14 @@
 
 CC := gcc
 FLAGS := -Wall -Wextra -Werror
+INCLUDE_DIRS := includes \
+								char_info \
+								linked_lists \
+								memory_operations \
+								numbers \
+								print \
+								strings
+INCLUDES := $(addprefix -I, $(INCLUDE_DIRS))
 NAME := libft.a
 SRCS := ./strings/memory_related/ft_strjoin.c \
 	./strings/memory_related/ft_split.c \
@@ -23,11 +31,11 @@ SRCS := ./strings/memory_related/ft_strjoin.c \
 	./strings/modify/ft_strmapi.c \
 	./strings/modify/ft_strlcat.c \
 	./strings/modify/ft_tolower.c \
-	./strings/info/ft_strnstr.c \
-	./strings/info/ft_strlen.c \
-	./strings/info/ft_strchr.c \
-	./strings/info/ft_strrchr.c \
-	./strings/info/ft_strncmp.c \
+	./strings/get_info/ft_strnstr.c \
+	./strings/get_info/ft_strlen.c \
+	./strings/get_info/ft_strchr.c \
+	./strings/get_info/ft_strrchr.c \
+	./strings/get_info/ft_strncmp.c \
 	./numbers/ft_atoi.c \
 	./numbers/ft_itoa.c \
 	./print/ft_putstr_fd.c \

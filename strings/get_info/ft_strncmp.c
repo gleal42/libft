@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/02 19:30:37 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/11 22:39:56 by gleal            ###   ########.fr       */
+/*   Created: 2021/02/03 00:07:20 by gleal             #+#    #+#             */
+/*   Updated: 2021/02/03 00:44:22 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_info.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*s1;
-	char	*s2;
-	size_t	i;
-	size_t	j;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
 
-	s1 = (char *)haystack;
-	s2 = (char *)needle;
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	i = 0;
-	if (!*s2)
-		return (s1);
-	while (i < len && s1[i])
-	{
-		j = 0;
-		while (i + j < len && s1[i + j] && s2[j] && s1[i + j] == s2[j])
-			j++;
-		if (s2[j] == '\0')
-			return (&s1[i]);
+	if (!n)
+		return (0);
+	while (str1[i] && str2[i] && i + 1 < n && str1[i] == str2[i])
 		i++;
-	}
-	return (0);
+	return (str1[i] - str2[i]);
 }

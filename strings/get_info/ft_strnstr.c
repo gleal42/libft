@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/02 18:43:55 by gleal             #+#    #+#             */
-/*   Updated: 2021/02/18 16:12:35 by gleal            ###   ########.fr       */
+/*   Created: 2021/02/02 19:30:37 by gleal             #+#    #+#             */
+/*   Updated: 2021/02/11 22:39:56 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_info.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*str;
-	char	*res;
+	char	*s1;
+	char	*s2;
+	size_t	i;
+	size_t	j;
 
-	str = (char *)s;
-	res = 0;
-	if (!str)
-		return (0);
-	while (*str)
+	s1 = (char *)haystack;
+	s2 = (char *)needle;
+	i = 0;
+	if (!*s2)
+		return (s1);
+	while (i < len && s1[i])
 	{
-		if (*str == (char)c)
-			res = str;
-		str++;
+		j = 0;
+		while (i + j < len && s1[i + j] && s2[j] && s1[i + j] == s2[j])
+			j++;
+		if (s2[j] == '\0')
+			return (&s1[i]);
+		i++;
 	}
-	if (*str == (char)c)
-		res = str;
-	return (res);
+	return (0);
 }

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "memory_related.h"
 
 void	*ft_freestrs(char **strs, size_t prev)
 {
@@ -58,7 +58,7 @@ size_t	ft_wordnr(char *str, char del)
 	return (count);
 }
 
-void	*ft_put_strings(char **new, char *str, char c)
+void	*ft_put_strings(char **new_str, char *str, char c)
 {
 	size_t	ptr;
 	size_t	i;
@@ -71,16 +71,16 @@ void	*ft_put_strings(char **new, char *str, char c)
 			ptr++;
 		if (str[ptr] != c && str[ptr])
 		{
-			new[i] = ft_substr(str, ptr, ft_len(&(str[ptr]), c));
-			if (!new[i])
-				return (ft_freestrs(new, i));
+			new_str[i] = ft_substr(str, ptr, ft_len(&(str[ptr]), c));
+			if (!new_str[i])
+				return (ft_freestrs(new_str, i));
 			while (str[ptr] != c && str[ptr])
 				ptr++;
 			i++;
 		}
 	}
-	new[i] = 0;
-	return (new);
+	new_str[i] = 0;
+	return (new_str);
 }
 
 char	**ft_split(char const *s, char c)

@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "linked_lists.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new_lst)
 {
 	t_list	*head;
 
 	head = *lst;
-	if (!lst || !new)
+	if (!lst || !new_lst)
 		return ;
 	if (!*lst)
 	{
-		*lst = new;
+		*lst = new_lst;
 		return ;
 	}
 	while (head->next)
 		head = head->next;
-	head->next = new;
+	head->next = new_lst;
 }
