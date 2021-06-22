@@ -1,24 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile 2                                         :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/09 15:43:58 by gleal             #+#    #+#              #
-#    Updated: 2021/06/20 22:26:10 by gleal            ###   ########.fr        #
+#    Updated: 2021/06/22 22:07:20 by gleal            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := gcc
-FLAGS := -Wall -Wextra -Werror
-INCLUDE_DIRS := includes \
-								char_info \
-								linked_lists \
-								memory_operations \
-								numbers \
-								print \
-								strings
+FLAGS := -Wall -Wextra -Werror -g
+INCLUDE_DIRS := .
 INCLUDES := $(addprefix -I, $(INCLUDE_DIRS))
 NAME := libft.a
 SRCS := ./strings/memory_related/ft_strjoin.c \
@@ -69,7 +63,7 @@ OBJS := $(SRCS:.c=.o)
 all: $(NAME) 
 
 %.o : %.c
-	$(CC) $(FLAGS) -c $^ -o $@ 
+	$(CC) $(FLAGS) -c $^ -o $@ $(INCLUDES)
 
 $(NAME) : $(OBJS)
 	ar -rc $(NAME) $(OBJS)

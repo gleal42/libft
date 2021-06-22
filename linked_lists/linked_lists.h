@@ -1,7 +1,7 @@
 #ifndef LINKED_LISTS_H
 # define LINKED_LISTS_H
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 typedef struct s_list
 {

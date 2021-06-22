@@ -1,7 +1,7 @@
 #ifndef GET_INFO_H
 # define GET_INFO_H
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlen(const char *s);

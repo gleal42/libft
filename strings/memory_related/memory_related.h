@@ -1,7 +1,7 @@
 #ifndef MEMORY_RELATED_H
 # define MEMORY_RELATED_H
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 char	**ft_split(char const *s, char c);
 char	*ft_strdup(const char *s1);

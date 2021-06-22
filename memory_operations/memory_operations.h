@@ -1,7 +1,7 @@
 #ifndef MEMORY_OPERATIONS_H
 # define MEMORY_OPERATIONS_H
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
