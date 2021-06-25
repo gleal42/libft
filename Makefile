@@ -6,7 +6,7 @@
 #    By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/09 15:43:58 by gleal             #+#    #+#              #
-#    Updated: 2021/06/22 22:07:20 by gleal            ###   ########.fr        #
+#    Updated: 2021/06/25 21:39:38 by gleal            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS := ./strings/memory_related/ft_strjoin.c \
 	./strings/get_info/ft_strchr.c \
 	./strings/get_info/ft_strrchr.c \
 	./strings/get_info/ft_strncmp.c \
+	./strings/get_info/is_integer.c \
 	./numbers/ft_atoi.c \
 	./numbers/ft_itoa.c \
 	./print/ft_putstr_fd.c \
