@@ -6,7 +6,7 @@
 #    By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/09 15:43:58 by gleal             #+#    #+#              #
-#    Updated: 2021/06/27 16:21:28 by gleal            ###   ########.fr        #
+#    Updated: 2021/07/03 16:15:05by gleal            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ SRCS := ./strings/memory_related/ft_strjoin.c \
 	./linked_lists/ft_lstsize.c \
 	./linked_lists/ft_lstadd_front.c \
 	./linked_lists/ft_lstdelone.c \
+	./linked_lists/ft_lstswap.c \
 	./linked_lists/ft_print_list.c \
 	./linked_lists/ft_isinlist.c
 

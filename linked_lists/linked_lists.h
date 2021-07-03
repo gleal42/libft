@@ -18,6 +18,6 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
 void ft_print_list_long(t_list *list);
 int	is_nbr_in_list(long long nbr, t_list *a);
-
+void	ft_lstswap(t_list **head);
 
 #endif
