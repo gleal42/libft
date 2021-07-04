@@ -16,8 +16,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstnew(void *content);
-void ft_print_list_long(t_list *list);
-int	is_nbr_in_list(long long nbr, t_list *a);
+void	ft_print_list_long(t_list *list);
 void	ft_lstswap(t_list **head);
+int		is_nbr_in_list(long long nbr, t_list *a);
 
 #endif
