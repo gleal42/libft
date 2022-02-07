@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 16:11:03 by gleal             #+#    #+#             */
-/*   Updated: 2021/07/03 17:13:20 by gleal            ###   ########.fr       */
+/*   Updated: 2022/02/06 19:40:51 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstswap(t_list **head)
 {
-	t_list *first_lst;
-	t_list *third_lst;
+	t_list	*first_lst;
+	t_list	*third_lst;
 
 	if (*head == 0 || (*head)->next == 0)
 		return ;
