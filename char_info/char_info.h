@@ -1,7 +1,7 @@
 #ifndef CHAR_INFO_H
 # define CHAR_INFO_H
 
-#include "libft.h"
+# include "libft.h"
 
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);

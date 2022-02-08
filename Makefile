@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC := gcc
-FLAGS := -Wall -Wextra -Werror -g
+FLAGS := -Wall -Wextra -Werror -g 
 INCLUDE_DIRS := .
 INCLUDES := $(addprefix -I, $(INCLUDE_DIRS))
 NAME := libft.a
