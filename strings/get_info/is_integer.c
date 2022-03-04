@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 21:06:42 by gleal             #+#    #+#             */
-/*   Updated: 2022/02/07 00:11:24 by gleal            ###   ########.fr       */
+/*   Updated: 2022/03/04 16:07:37 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,19 @@
 
 // have to add something to check if it is bigger than max number
 
-int	is_within_lims(char *strg, char sign)
+int	is_integer(char *str)
 {
-	int	i;
+	char	*strg;
 
-	i = 0;
-	if (ft_strlen(strg) > 10)
+	if (!str)
 		return (0);
-	if (ft_strlen(strg) == 10)
-	{
-		if (strg[0] <= '2'
-			&& strg[2] <= '4'
-			&& strg[1] <= '1'
-			&& strg[3] <= '7'
-			&& strg[4] <= '4'
-			&& strg[5] <= '8'
-			&& strg[6] <= '3'
-			&& strg[7] <= '6'
-			&& strg[8] <= '4'
-			&& ((sign == '-' && strg[9] <= '8')
-				|| (sign != '-' && strg[9] <= '7')))
-			return (1);
+	strg = str;
+	if (*strg == '+' || *strg == '-')
+		strg++;
+	if (!is_all_digits(strg))
 		return (0);
-	}
+	if (!is_within_lims(strg))
+		return (0);
 	return (1);
 }
 
@@ -59,24 +49,16 @@ int	is_all_digits(char *str)
 	return (1);
 }
 
-int	is_integer(char *str)
+int	is_within_lims(char *strg)
 {
-	char	*strg;
+	long	nbr;
 
-	if (!str)
+	if (ft_strlen(strg) > 10)
 		return (0);
-	strg = str;
-	if (*strg == '+' || *strg == '-')
-	{
-		strg++;
-	}
-	if (!is_all_digits(strg))
-	{
+	nbr = ft_atol(strg);
+	if (nbr > INT32_MAX)
 		return (0);
-	}
-	if (! is_within_lims(strg, *str))
-	{
+	if (nbr < INT32_MIN)
 		return (0);
-	}
 	return (1);
 }

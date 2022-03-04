@@ -32,6 +32,7 @@ SRCS := ./strings/memory_related/ft_strjoin.c \
 	./strings/get_info/ft_strncmp.c \
 	./strings/get_info/is_integer.c \
 	./numbers/ft_atoi.c \
+	./numbers/ft_atol.c \
 	./numbers/ft_itoa.c \
 	./print/ft_putstr_fd.c \
 	./print/ft_putnbr_fd.c \
