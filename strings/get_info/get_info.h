@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 15:48:09 by gleal             #+#    #+#             */
-/*   Updated: 2022/03/04 16:05:15 by gleal            ###   ########.fr       */
+/*   Updated: 2022/03/05 17:04:27 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,11 @@ char	*ft_strrchr(const char *s, int c);
 int		is_within_lims(char *strg);
 int		is_all_digits(char *str);
 int		is_integer(char *str);
+int		get_next_line(int fd, char **line);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+
+# endif
 
 #endif

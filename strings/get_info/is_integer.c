@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 21:06:42 by gleal             #+#    #+#             */
-/*   Updated: 2022/03/04 16:07:37 by gleal            ###   ########.fr       */
+/*   Updated: 2022/03/05 16:47:50 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	is_integer(char *str)
 {
 	char	*strg;
 
-	if (!str)
+	if (!str || !(*str))
 		return (0);
 	strg = str;
 	if (*strg == '+' || *strg == '-')
