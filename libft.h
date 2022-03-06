@@ -6,7 +6,7 @@
 /*   By: gleal <gleal@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/28 19:17:56 by gleal             #+#    #+#             */
-/*   Updated: 2021/07/03 16:54:59 by gleal            ###   ########.fr       */
+/*   Updated: 2022/03/06 19:25:36 by gleal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <unistd.h>
 # include <limits.h>
 
+# include "bitwise/bitwise.h"
 # include "char_info/char_info.h"
 # include "linked_lists/linked_lists.h"
 # include "memory_operations/memory_operations.h"

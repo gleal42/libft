@@ -12,10 +12,18 @@
 
 CC := gcc
 FLAGS := -Wall -Wextra -Werror -g 
-INCLUDE_DIRS := .
+INCLUDE_DIRS := bitwise \
+				char_info \
+				linked_lists \
+				memory_operations \
+				numbers \
+				print \
+				strings \
+				.
 INCLUDES := $(addprefix -I, $(INCLUDE_DIRS))
 NAME := libft.a
-SRCS := ./strings/memory_related/ft_strjoin.c \
+SRCS := ./bitwise/print_bits.c \
+	./strings/memory_related/ft_strjoin.c \
 	./strings/memory_related/ft_split.c \
 	./strings/memory_related/ft_substr.c \
 	./strings/memory_related/ft_strtrim.c \
@@ -67,7 +75,7 @@ SRCS := ./strings/memory_related/ft_strjoin.c \
 
 OBJS := $(SRCS:.c=.o)
 
-all: $(NAME) 
+all: $(NAME)
 
 %.o : %.c
 	$(CC) $(FLAGS) -c $^ -o $@ $(INCLUDES)
@@ -83,4 +91,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: libft minilibx all bonus clean fclean re
+.PHONY: libft all bonus clean fclean re
